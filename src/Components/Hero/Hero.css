@@ -1,72 +1,125 @@
-.hero{
+.hero {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
+    text-align: center; /* Center-align text on all screen sizes */
 }
 
-.hero img{
-    margin-top: 150px;
-    width: 220px;
-    height: 220px;
+.hero img {
+    margin-top: 100px;
+    width: 150px; /* Smaller image size for smaller screens */
+    height: 150px;
     border-radius: 50%;
 }
 
-.hero h1{
-    text-align: center;
-    width: 70%;
-    font-size: 90px;
+.hero h1 {
+    width: 90%; /* Adjust width for smaller screens */
+    font-size: 36px; /* Reduced font size for small screens */
     font-weight: 600;
+    margin: 0 20px; /* Ensure proper padding on smaller screens */
 }
 
-.hero h1 span{
-    background: linear-gradient(140deg,blue,purple);
+.hero h1 span {
+    background: linear-gradient(140deg, blue, purple);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero p{
-    width: 50%;
-    text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+.hero p {
+    width: 90%; /* Make the paragraph fit smaller screens */
+    font-size: 18px; /* Adjust font size */
+    line-height: 28px; /* Adjust line height */
+    margin: 0 20px; /* Ensure proper spacing on small screens */
 }
 
-.hero-action{
+.hero-action {
     display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 24px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center; /* Center-align buttons */
+    gap: 15px; /* Adjust gap for smaller screens */
+    font-size: 18px; /* Adjust font size */
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
-.hero-connect{
-    padding: 20px 40px;
+.hero-connect {
+    padding: 15px 30px; /* Adjust padding for smaller screens */
     border-radius: 50px;
-    background: linear-gradient(140deg,blue,purple);
+    background: linear-gradient(140deg, blue, purple);
     cursor: pointer;
 }
 
-.alink{
+.alink {
     text-decoration: none;
     color: #fff;
 }
 
-.hero-resume{
-    padding: 20px 40px;
+.hero-resume {
+    padding: 15px 30px; /* Adjust padding for smaller screens */
     border-radius: 50px;
     background: #fff;
     color: #000;
     cursor: pointer;
 }
 
-.hero-connect:hover{
+.hero-connect:hover {
     border: 2px solid white;
 }
 
-.hero-resume:hover{
-    border: 5px solid purple;
+.hero-resume:hover {
+    border: 2px solid purple;
 }
 
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .hero img {
+        margin-top: 150px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        width: 60%;
+    }
+
+    .hero-action {
+        gap: 25px;
+        font-size: 20px;
+    }
+
+    .hero-connect,
+    .hero-resume {
+        padding: 20px 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 90px;
+        width: 70%;
+    }
+
+    .hero p {
+        font-size: 24px;
+        width: 50%;
+        line-height: 40px;
+    }
+
+    .hero-action {
+        gap: 30px;
+        font-size: 24px;
+    }
+}

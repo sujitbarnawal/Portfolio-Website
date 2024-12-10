@@ -1,62 +1,123 @@
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 170px;
+    padding: 20px;
+    margin: 0 20px; /* Adjusted margin for small screens */
 }
 
-.logo-name{
-    font-size: 35px;
+.logo-name {
+    font-size: 24px; /* Reduced size for smaller screens */
     font-weight: bold;
     letter-spacing: 3px;
     color: goldenrod;
     cursor: pointer;
 }
 
-.nav-menu{
+.nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 60px;
-    font-size: 20px;
+    gap: 40px;
+    font-size: 18px;
+    transition: right 0.3s ease-in-out;
 }
 
-.nav-menu li{
+.nav-menu li {
     cursor: pointer;
     flex-direction: column;
     display: flex;
     gap: 5px;
 }
 
-.alink{
+.alink {
     text-decoration: none;
     color: white;
 }
 
-.nav-menu li img{
+.nav-menu li img {
     display: flex;
     margin: auto;
 }
 
-.nav-connect{
-    padding: 15px 35px;
+.nav-connect {
+    padding: 10px 20px; /* Adjusted padding for smaller screens */
     border-radius: 50px;
-    background: linear-gradient(140deg,blue,purple);
+    background: linear-gradient(140deg, blue, purple);
     cursor: pointer;
     transition: 0.5s;
+    font-size: 16px; /* Adjusted font size for smaller screens */
 }
 
-.nav-connect:hover{
+.nav-connect:hover {
     transform: scale(1.05);
 }
 
-
-.nav-mob-open{
+.nav-mob-open {
     display: none;
 }
 
-.nav-mob-close{
+.nav-mob-close {
     display: none;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: space-between;
+    }
 
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 300px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: start;
+        padding: 20px;
+        background: #121212;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        gap: 20px;
+        z-index: 10;
+    }
+
+    .nav-menu li {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-connect {
+        display: none; /* Hide the connect button */
+    }
+
+    .nav-mob-open {
+        display: block;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .nav-mob-close {
+        display: block;
+        width: 40px;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-name {
+        font-size: 20px;
+    }
+
+    .nav-connect {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .nav-menu {
+        width: 250px;
+    }
+}

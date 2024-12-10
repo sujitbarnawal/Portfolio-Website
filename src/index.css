@@ -1,16 +1,33 @@
-
-*{
+/* Resetting margins and paddings */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model behavior */
 }
 
-body{
-    height: 100vh;
-    background: #161513;
-    color: #fff;
-    font-family: 'outfit','Poppins',sans-serif;
+/* Styling for the body */
+body {
+    height: 100%;
+    background: #161513; /* Background color */
+    color: #fff; /* Default text color */
+    font-family: 'Outfit', 'Poppins', sans-serif; /* Fallback fonts */
+    overflow-x: hidden; /* Prevents horizontal scroll due to elements spilling */
 }
 
-#root{
-    width: fit-content;
+/* Global link styling */
+a {
+    text-decoration: none;
+    color: inherit; /* Ensures links inherit text color */
+    transition: color 0.3s; /* Smooth transition for color changes */
+}
+
+/* Global image styling */
+img {
+    max-width: 100%; /* Prevents images from overflowing */
+    display: block; /* Avoids whitespace under images */
+}
+
+/* Smooth scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth;
 }

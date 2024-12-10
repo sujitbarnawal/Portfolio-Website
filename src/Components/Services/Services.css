@@ -1,79 +1,152 @@
-.services{
+.services {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+    gap: 60px; /* Adjusted gap for smaller screens */
+    margin: 50px 20px; /* Reduced margin for smaller screens */
 }
 
-.services-title{
+.services-title {
     position: relative;
+    text-align: center;
 }
 
-.services-title h1{
-    padding: 0px 30px;
-    font-size: 80px;
+.services-title h1 {
+    padding: 0px 20px;
+    font-size: 50px; /* Adjusted for smaller screens */
     font-weight: 600;
 }
 
-.services-title img{
+.services-title img {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -1;
+    max-width: 100px; /* Scale the pattern image for smaller screens */
 }
 
-.services-format{
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid layout */
+    gap: 30px;
+    width: 100%; /* Ensure it spans full width */
+}
+
+.services-format {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20px;
-    padding: 60px;
+    padding: 30px; /* Adjusted padding for smaller screens */
     border-radius: 10px;
     border: 2px solid #fff;
     transition: 0.4s;
     cursor: pointer;
+    text-align: center; /* Align text for smaller containers */
 }
 
-.services-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 80px;
-}
-
-.services-format h3{
-    font-size: 28px;
+.services-format h3 {
+    font-size: 20px; /* Reduced size for smaller screens */
     font-weight: 600;
 }
 
-.services-format h2{
-    font-size: 38px;
+.services-format h2 {
+    font-size: 24px; /* Adjusted for better readability */
     font-weight: 800;
-    background: linear-gradient(140deg,blue,purple);
+    background: linear-gradient(140deg, blue, purple);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.services-format p{
+.services-format p {
     color: #d4d4d4;
-    font-size: 24px;
-    line-height: 40px;
-    max-width: 300px;
+    font-size: 18px; /* Reduced for smaller screens */
+    line-height: 30px;
+    max-width: 100%; /* Allow full width on smaller screens */
 }
 
-.services-readmore{
+.services-readmore {
     display: flex;
-    gap: 20px;
+    gap: 10px; /* Adjusted gap for smaller screens */
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-.services-format:hover{
+.services-format:hover {
     border: 2px solid blueviolet;
-    background-image: linear-gradient(45deg,#3f0028,#582300);
+    background-image: linear-gradient(45deg, #3f0028, #582300);
     transform: scale(1.05);
     transition: 0.4s;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .services {
+        gap: 40px;
+        margin: 40px 15px;
+    }
+
+    .services-title h1 {
+        font-size: 40px;
+    }
+
+    .services-title img {
+        max-width: 80px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .services-format {
+        padding: 20px;
+    }
+
+    .services-format h3 {
+        font-size: 18px;
+    }
+
+    .services-format h2 {
+        font-size: 20px;
+    }
+
+    .services-format p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+    .services {
+        gap: 30px;
+    }
+
+    .services-title h1 {
+        font-size: 30px;
+    }
+
+    .services-title img {
+        max-width: 60px;
+    }
+
+    .services-format {
+        padding: 15px;
+    }
+
+    .services-format h3 {
+        font-size: 16px;
+    }
+
+    .services-format h2 {
+        font-size: 18px;
+    }
+
+    .services-format p {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
