@@ -23,20 +23,21 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    width: 50%; /* Adjust image size for smaller screens */
+    width: 50%;
 }
 
 .contact-section {
     display: flex;
-    flex-direction: column; /* Default to column layout for small screens */
+    flex-direction: column;
     gap: 40px;
+    align-items: center;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center;
 }
 
 .contact-left h1 {
@@ -67,7 +68,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    justify-content: center; /* Center icons and text on smaller screens */
+    justify-content: center;
 }
 
 .contact-right {
@@ -86,7 +87,7 @@
 .contact-right input,
 .contact-right textarea {
     width: 100%;
-    max-width: 400px; /* Restrict input and textarea widths for small screens */
+    max-width: 400px;
     padding: 15px;
     border: none;
     border-radius: 4px;
@@ -113,15 +114,15 @@
     border: 2px solid #fff;
 }
 
-/* Media Queries for Responsiveness */
 @media (min-width: 768px) {
     .contact {
         margin: 60px 40px;
     }
 
     .contact-section {
-        flex-direction: row; /* Row layout for larger screens */
+        flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         gap: 80px;
     }
 
@@ -134,7 +135,7 @@
     }
 
     .contact-right {
-        align-items: start;
+        align-items: flex-start;
     }
 
     .contact-right input,
