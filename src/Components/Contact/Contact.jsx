@@ -4,7 +4,7 @@ import mail_icon from "../../assets/mail_icon.svg";
 import location_icon from "../../assets/location_icon.svg";
 import call_icon from "../../assets/call_icon.svg";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
   const form = useRef();
