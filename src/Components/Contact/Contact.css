@@ -63,12 +63,11 @@
     font-size: 18px;
 }
 
-.contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: center; /* Center icons and text on smaller screens */
-}
+ .contact-detail {
+     display: flex;
+     flex-direction: row;
+     gap: 10px;
+}  
 
 .contact-right {
     display: flex;
@@ -127,6 +126,7 @@
 
     .contact-left {
         text-align: left;
+        width: 50%;
     }
 
     .contact-left h1 {
@@ -135,6 +135,7 @@
 
     .contact-right {
         align-items: start;
+        width: 50%;
     }
 
     .contact-right input,
