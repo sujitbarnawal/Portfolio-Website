@@ -45,6 +45,17 @@ const About = () => {
             <div className="about-skill ">
               <p className="min-w-[150px] text-[24px] font-500 ">Bootstrap</p>
             </div>
+            <div className="about-skill ">
+              <p className="min-w-[150px] text-[24px] font-500 ">Express</p>
+            </div>
+            <div className="about-skill ">
+              <p className="min-w-[150px] text-[24px] font-500 ">Node JS</p>
+            </div>
+            <div className="about-skill ">
+              <p className="min-w-[150px] text-[24px] font-500 ">
+                Git & Github
+              </p>
+            </div>
           </div>
         </div>
       </div>
